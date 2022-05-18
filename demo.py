@@ -11,6 +11,7 @@ Created on Sat Jul 24 16:41:32 2021
 from sklearn.datasets import load_digits
 from frnmf import FRNMF
 import nimfa
+import GNMFLIB as gnmflb
 import tools 
 import numpy as np
 #
@@ -88,7 +89,6 @@ tools.scoresList(y, y_pred, 'GNMF')
 
 
 print('GNMF')
-import GNMFLIB as gnmflb
 _, Hgnmf2, _ = gnmflb.gnmf(X.T,  lambd=0.3, n_components=r, tol_nmf=1e-3, max_iter=mi, verbose=False)
 y_pred = np.array(np.argmax(Hgnmf2, axis=0))
 tools.scoresList(y, y_pred, 'GNMF2')
