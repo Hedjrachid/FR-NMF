@@ -10,8 +10,7 @@ Created on Sat Jul 24 16:41:32 2021
 
 from sklearn.datasets import load_digits
 from frnmf import FRNMF
-import nimfa
-import GNMFLIB as gnmflb
+import nimfa  # from https://nimfa.biolab.si/
 import tools 
 import numpy as np
 #
@@ -86,13 +85,6 @@ gnmf.compute_factors(max_iter=mi, lmd= 10, weight_type='dot-weighting', param= 5
 Hgnmf= gnmf.H
 y_pred = np.array(np.argmax(Hgnmf, axis=0))[0]
 tools.scoresList(y, y_pred, 'GNMF')
-
-
-print('GNMF')
-_, Hgnmf2, _ = gnmflb.gnmf(X.T,  lambd=0.3, n_components=r, tol_nmf=1e-3, max_iter=mi, verbose=False)
-y_pred = np.array(np.argmax(Hgnmf2, axis=0))
-tools.scoresList(y, y_pred, 'GNMF2')
-
 
 
 
