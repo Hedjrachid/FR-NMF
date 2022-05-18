@@ -9,7 +9,7 @@ Created on Sat Jul 24 16:41:32 2021
 
 
 from sklearn.datasets import load_digits
-from fr_nmf.frnmf import FRNMF
+from frnmf import FRNMF
 import nimfa
 import tools 
 import numpy as np
