@@ -112,7 +112,7 @@ class FRNMF(NMFMain):
         Usage:
             W, H = seung_update(V, W, H)
         Parameters:
-            X: a (d x n)-array containing n observations in the col"}}}}}}}}}}}}}}}}}}}}}:>?umns
+            X: a (d x n)-array containing n observations in the columns
             W: (d x k)-array of non-negative basis images (components)
             H: (k x n)-array of weights, one column for each of the n observations
         Returns:
