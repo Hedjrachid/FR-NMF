@@ -78,15 +78,4 @@ Hsnmf = snmf_fit.coef()
 y_pred = np.array(np.argmax(Hsnmf, axis=0))[0]
 tools.scoresList(y, y_pred, 'SNMF')
 
-#Graph Regularized NMF (GNMF)
-from libnmf.gnmf import GNMF
-gnmf = GNMF(X.T, rank = r)
-gnmf.compute_factors(max_iter=mi, lmd= 10, weight_type='dot-weighting', param= 5)
-Hgnmf= gnmf.H
-y_pred = np.array(np.argmax(Hgnmf, axis=0))[0]
-tools.scoresList(y, y_pred, 'GNMF')
-
-
-
-
 
